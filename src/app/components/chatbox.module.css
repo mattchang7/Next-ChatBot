@@ -1,0 +1,68 @@
+.chatBoxContainer {
+  width: 50%;
+  margin: 20px 0px 20px 0px;
+  overflow-y: scroll;
+}
+
+.userBubbleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.userBubble {
+  max-width: 60%;
+  background-color: blanchedalmond;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px 5px 15px;
+  border-radius: 15px 15px 0px 15px;
+  color: black;
+}
+
+.assistantBubbleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.assistantBubble {
+  max-width: 60%;
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px 5px 15px;
+  border-radius: 15px 15px 15px 0px;
+  color: black;
+}
+
+.loading {
+  font-size: 30px;
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  animation: ellipsis steps(4, end) 500ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
